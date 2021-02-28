@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include 'include/connect.php';
-include("include/header.php");
+include 'vardhaman/include/connect.php';
+include("vardhaman/include/header.php");
 if(!isset($_SESSION['rollnumber']))
-header("location:login.php");
+echo "<script>window.open('vardhaman/login.php',' _self')</script>";
 $id=$_GET['id'];
 $insert="Select * from users where id=$id";
  $query=mysqli_query($con,$insert);

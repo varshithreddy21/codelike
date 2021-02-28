@@ -16,7 +16,7 @@
 </nav>
 <div class="card" style="margin: 50px;margin-left: 200px;margin-right: 200px">
 
-<form class="needs-validation" style="margin: 50px" action="registerHandler.php" method="post">
+<form class="needs-validation" style="margin: 50px" action="vardhaman/registerHandler.php" method="post">
   <div class="form-row">
     <div class="col-md-6 mb-3">
       <label for="validationCustom01">First name</label>
