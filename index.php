@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php
 session_start();
-include 'vardhaman/include/connect.php';
-include("vardhaman/include/header.php");
+include 'include/connect.php';
+include("include/header.php");
 if(!isset($_SESSION['rollnumber']))
-echo "<script>window.open('vardhaman/login.php')</script>"
+echo "<script>window.open('login.php')</script>"
 ?>
 
 <html>
@@ -35,7 +35,7 @@ rollnumber like '%$search%'";
 		        $ides=$rows['id'];
 		        $toss=$rows['tos'];
 
-		       	echo "<a style='color: inherit;'href='vardhaman/view.php?id=$ides'><div class='row' style='margin:2px;'>
+		       	echo "<a style='color: inherit;'href='view.php?id=$ides'><div class='row' style='margin:2px;'>
 		       	<div class='col-md-2'>$i</div>
 		       	<div class='col-md-3'>$firstnames $lastname</div>
 		       	<div class='col-md-3'>$rollnumbers</div>
@@ -72,7 +72,7 @@ rollnumber like '%$search%'";
 		        $ide=$row['id'];
 		        $tos=$row['tos'];
 
-		       	echo "<a style='color: inherit;'href='vardhaman/view.php?id=$ide'><div class='row' style='margin:2px;'>
+		       	echo "<a style='color: inherit;'href='view.php?id=$ide'><div class='row' style='margin:2px;'>
 		       	<div class='col-md-2'>$i</div>
 		       	<div class='col-md-3'>$firstname $lastname</div>
 		       	<div class='col-md-3'>$rollnumber</div>
@@ -90,7 +90,7 @@ rollnumber like '%$search%'";
 		        $firstname=$row['firstname'];
 		        $lastname=$row['lastname'];
 		        $tos=$row['tos'];
-		       	echo "<a style='color: inherit;'href='vardhaman/view.php?id=$ide'><div class='row' style='margin:2px;'>
+		       	echo "<a style='color: inherit;'href='view.php?id=$ide'><div class='row' style='margin:2px;'>
 		       	<div class='col-md-2'>$i</div>
 		       	<div class='col-md-3'>$firstname $lastname</div>
 		       	<div class='col-md-3'>$rollnumber</div>
@@ -107,7 +107,7 @@ rollnumber like '%$search%'";
 
 
 		</div>
-		<div class="card" style="align-items: center;"><form action="vardhaman/index.php">
+		<div class="card" style="align-items: center;"><form action="index.php">
   <div class="form-row align-items-center">
     <div class="col-auto my-1">
       <label class="mr-sm-2 sr-only" for="inlineFormCustomSelect">Year</label>

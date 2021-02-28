@@ -15,7 +15,7 @@
   </a>
 </nav>
 <div class="card" style="margin: 100px;margin-left: 200px;margin-right: 200px">
-<form style="margin: 50px" action="vardhaman/loginHandler.php" method="post">
+<form style="margin: 50px" action="loginHandler.php" method="post">
   <div class="form-group" >
     <label for="exampleInputEmail1">Rollnumber</label>
     <input type="text" class="form-control" name="rollnumber" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -38,7 +38,7 @@
 <script type="text/javascript">
 	function myFunc(){
 		//alert("hii");
-		location.replace("vardhaman/register.php");
+		location.replace("register.php");
 	}
 </script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

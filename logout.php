@@ -2,5 +2,5 @@
 session_start();
 
 session_destroy();
-echo "<script>window.open('vardhaman/login.php')</script>"
+echo "<script>window.open('login.php')</script>"
 ?>

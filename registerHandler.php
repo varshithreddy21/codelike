@@ -1,5 +1,5 @@
 <?php
-include("vardhaman/include/connect.php");
+include("include/connect.php");
 
     if(isset($_POST['submit'])){
         $firstname=htmlentities(mysqli_real_escape_string($con,$_POST['firstname']));
@@ -27,7 +27,7 @@ include("vardhaman/include/connect.php");
         $check=mysqli_num_rows($run_email);
         if($check==1){
             echo "<script>alert('Rollnumber already exists')</script>";
-            echo "<script>window.open('vardhaman/register.php',' _self')</script>";
+            echo "<script>window.open('register.php',' _self')</script>";
             exit();
         }
         $insert="insert into users(
@@ -41,13 +41,13 @@ include("vardhaman/include/connect.php");
         if($query){
         	
             echo "<script> setTimeout(function(){alert('Welldone $firstname , You Succesfully created account');},1000) </script>";
-            echo "<script>window.open('vardhaman/login.php','_self');
+            echo "<script>window.open('login.php','_self');
 exit;</script>";
 
             
         }else{
             echo "<script>alert('$query')</script>";
-            echo "<script>window.open('vardhaman/register.php',' _self');exit;</script>";
+            echo "<script>window.open('register.php',' _self');exit;</script>";
             
         }
     }

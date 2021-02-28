@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <?php
-include 'vardhaman/include/connect.php';
+include 'include/connect.php';
 if(!isset($_SESSION['rollnumber'])){
-echo "<script>window.open('vardhaman/login.php');</script>";
+echo "<script>window.open('login.php');</script>";
 }
 $rollnumber=$_SESSION['rollnumber'];
 $insert="Select * from users where rollnumber='$rollnumber'";
@@ -37,10 +37,10 @@ $row=mysqli_fetch_array($query);
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item ">
-        <a class="nav-link" href="<?php echo "vardhaman/index.php?id=$id"?>">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo "index.php?id=$id"?>">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?php echo "vardhaman/profile.php?id=$id"?>">Profile</a>
+        <a class="nav-link" href="<?php echo "profile.php?id=$id"?>">Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
@@ -53,14 +53,14 @@ $row=mysqli_fetch_array($query);
           <a class="dropdown-item" href="#">Action</a>
           <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="vardhaman/logout.php">logout</a>
+          <a class="dropdown-item" href="logout.php">logout</a>
         </div>
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="false"></a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0" method="post" action="vardhaman/index.php">
+    <form class="form-inline my-2 my-lg-0" method="post" action="index.php">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="query">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit" name="search">Search</button>
     </form>
@@ -70,7 +70,7 @@ $row=mysqli_fetch_array($query);
 <script type="text/javascript">
   function myFunc(){
     //alert("hii");
-    location.replace("vardhaman/register.php");
+    location.replace("register.php");
   }
 </script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
