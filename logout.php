@@ -2,5 +2,5 @@
 session_start();
 
 session_destroy();
-header("location:index.php");
+echo "<script>window.open('vardhaman/login.php')</script>"
 ?>

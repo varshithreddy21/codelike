@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("include/connect.php");
+include("vardhaman/include/connect.php");
 if(isset($_POST['login'])){
     $rollnumber=htmlentities(mysqli_real_escape_string($con,$_POST['rollnumber']));
     $password=htmlentities(mysqli_real_escape_string($con,$_POST['password']));
@@ -13,10 +13,10 @@ if(isset($_POST['login'])){
     if(mysqli_num_rows($users)>0){
     
         $_SESSION['rollnumber']=$rollnumber;
-   echo "<script> window.open('index.php?id=$user_id','_self');exit;</script>";
+   echo "<script> window.open('vardhaman/index.php?id=$user_id','_self');exit;</script>";
     }else{
        echo "<script> alert('Wrong rollnumber or password!!');
-        window.open('login.php');
+        window.open('vardhaman/login.php');
         exit;
         </script>";
     }
